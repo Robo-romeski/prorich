@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" href="footer.css">
+<style>
+    .cloudwok-embed .dropzone {
+        background: #09758E !important;
+        color: #D9E7FF !important;
+        border: solid 3px #425BAC !important;
+    }
+    .cloudwok-embed .dropzone .filepicker {
+        background: #5877C1 !important;
+        color: #D9E7FF !important;
+        border: solid 1px #425BAC !important;
+    }
+    .cloudwok-embed .btn-start-upload {
+        background: #186EAB !important;
+        color: #FFFFFF !important;
+        border: solid 1px #135A8C !important;
+    }
+</style>
+
+  <title>Home To ProRich Studios!</title>
+</head>
+<body>
+
+
+<!-- Code's messsy; Don't judge me! -->
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="topper" class="navbar-brand" href="#">ProRich <span>Studios</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="schedBlocklink" href="#">Schedule</a></li>
+        <li><a href="#">Production</a></li>
+        <li><a id="uploadBlocklink" href="#">Mix Online</a></li>
+        <li><a id="footerlink" href="#">Contact Us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div id="form-messages"></div>
+            <div id="startchange"></div>
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/slideshowone.jpg" alt="..." width="100%">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/pianoman.jpg" alt="..." width="100%">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <div class="item">
+      <img src="img/chainup.jpg" alt="..." width="100%">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+
+            
+            <div class="content-space-one">
+                <div class="text-center">
+              <div id="services" class="pad-section">
+    <h2 class="text-center">What We Offer</h2> <hr />
+    <div class="row text-center">
+    <div class="container">
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-folder-open"> </i><br><br>
+        <h4>Remote Mastering</h4>
+        <p>Upload your un-polished tracks for mixing and mastering...Even if you cant be here in person!</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-calendar"> </i><br><br>
+        <h4>Schedule Online</h4>
+        <p>Reserve your studio slots online with the click of a button!</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-music"> </i><br><br>
+        <h4>High Quality Service</h4>
+        <p>Our studio engineers work tirelessly to provide the best mix possible and with industry low rates, The best bang for your buck you can hope for!</p>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <i class="glyphicon glyphicon-credit-card"> </i><br><br>
+        <h4>Flexible Payments</h4>
+        <p>All major forms of payment accepted - Online or In Person!</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+                </div>
+
+             <!--    <div class="content-block-one">
+            <h1>This is a content block</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div> -->
+
+            </div>
+            <div id="schedBlock" class="content-block-one">
+            <h1>Schedule your time slot!</h1>
+            
+                <p>Start off with selecting the desired timeslot, and a representative will contact you in reference to that availability.</p><br><br>
+                <div id="bookingjs"></div>
+                </div>
+                
+            </div>
+
+
+
+
+            <div id="uploadBlock" class="content-block-one">
+             <h1>Mix/Master Online</h1>
+                <p>Can't be here in person? No problem! Upload your rough files/sessions for mixing/mastering services done with a magical touch!</p>
+                <button class="btn btn-primary" type="button" id="uploadButton">Open/Close Uploader</button>
+                </div>
+
+                <div id="upload" class="container schtoggle">
+                              <div class="cloudwok-embed" data-wokid="3-gD">
+    <div class="cloudwok-upload-files"></div>
+    <form class="cloudwok-upload">
+        <div class="cloudwok-dropzone"></div>
+        </form>
+    
+        <div class="cloudwok-upload-message"></div>
+    </div>
+</div>
+
+
+            
+<!-- footer -->
+<footer id="footer" class="footer-distributed content-space-footer">
+
+      <div class="footer-left">
+
+        <h3>ProRich <span>Studios </span> </h3>
+
+        <!-- <p class="footer-links servlinks">
+          <a href="#">Home</a>
+          -
+          <a href="#">Blog</a>
+          -
+          <a href="#">Pricing</a>
+          -
+          <a href="#">About</a>
+          -
+          <a href="#">Faq</a>
+          -
+          <a href="#">Contact</a>
+        </p> -->
+
+        <h3 class="footer-company-name">ProRich Studios &copy; 2015</h3>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-soundcloud"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="holla">Contact Us</p>
+
+        <form method="post" id="ajax-contact" name="emailform" action="email.php">
+          <input type="text" name="name" placeholder="Name" id="name" required>
+          <input type="text" name="email" placeholder="Email" id="email" required>
+          <textarea name="message" placeholder="Message" id="message" required></textarea>
+          <button type="submit" name='submit' value="submit">Send</button>
+
+        </form>
+
+      </div>
+
+    </footer>
+
+
+            <div id="push"></div>
+        <script>
+        $(document).ready(function($) {
+     var form = $('#ajax-contact');
+    $(form).submit(function(event) {
+         var formData = {
+             'name'              : $('#name').val(),
+             'email'             : $('#email').val(),
+             'message'           : $('#message').val()
+         };
+        //var formData = $(form).serialize();
+        event.preventDefault();
+        console.log(formData);
+        $.ajax({
+            type: "POST",
+            url: $(form).attr('action'), 
+            data: formData,
+            success: function(msg){
+              alert("form post success!");
+                //$("#stayInformed").modal('hide');
+            },
+            error: function(){
+                alert("form post failed");
+            }   
+        });
+    });
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.timekit.io/booking-js/v1/booking.min.js" defer></script>
+  <script type="text/javascript">
+    window.timekitBookingConfig = {
+      name: 'Mike Pro',
+      email: 'prorichstudio1212@gmail.com',
+      apiToken: '8cOsns9GZIEWKjw4ef60kdKDDOxW1s84',
+      calendar: 'fc631135-b3ae-4cb1-be83-6ab8c348bcc7',
+      avatar: 'https://scontent-lga3-1.xx.fbcdn.net/hphotos-xap1/v/t1.0-9/13717_1370634742962664_4071491324545926638_n.jpg?oh=123395a1ff220bf5b9e5dbef65490b23&oe=5780A039',
+      gotoFirstEvent: true
+    }
+  </script>
+  <script>
+    var cloudWokConfig = {
+        "dropzone": {
+            "label": "DRAG 'N DROP",
+            "button": "ADD FILES"
+        },
+        "success": {
+            "message": {
+                "title": "Successful Upload!",
+                "subtitle": "Your files have been uploaded successfully!",
+                "text": "A Pro Rich Studios will be in touch with you shortly"
+            }
+        },
+        "form": {
+            "email": {
+                "placeholder": "Enter your e-mail (optional)",
+                "optional": false
+            },
+            "name": {
+                "firstname": {
+                    "placeholder": "Enter your first name (optional)",
+                    "required": false
+                },
+                "lastname": {
+                    "placeholder": "Enter your last name (optional)",
+                    "required": false
+                }
+            },
+            "message": {
+                "placeholder": "Enter a message (optional)",
+                "rows": 3,
+                "optional": true
+            },
+            "button": "UPLOAD AND SEND",
+            "sent": "FILE HAS BEEN UPLOADED!"
+        }
+    }
+    document.querySelector(".cloudwok-embed").setAttribute("data-config",
+    JSON.stringify(cloudWokConfig));
+    (function(window, document) {
+    var loader = function() {
+    var script = document.createElement("script"),
+    tag = document.getElementsByTagName("script")[0];
+    script.src = "https://www.cloudwok.com/cdn-vassets/javascripts/cw.js";
+    tag.parentNode.insertBefore(script, tag);
+    };
+    window.addEventListener ? window.addEventListener("load", loader, false) :
+    window.attachEvent("onload", loader);
+    })(window, document);
+</script>
+  <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script type="text/javascript" src="nav.js"></script>
+            </body>
+</html>
