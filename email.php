@@ -18,10 +18,10 @@
 
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "jeromemoore@usa.com";
+        $recipient = "prorichstudio1212@gmail.com";
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = "New Message From The Pro Rich Site! $name is trying to connect with you!";
 
         // Build the email content.
         $email_content = "Name: $name\n";

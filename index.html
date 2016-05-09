@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="icon" href="img/notebkg.png">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -49,13 +49,15 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a id="schedBlocklink" href="#">Schedule</a></li>
-        <li><a href="#">Production</a></li>
+       <!-- <li><a href="#">Production</a></li> -->
         <li><a id="uploadBlocklink" href="#">Mix Online</a></li>
         <li><a id="footerlink" href="#">Contact Us</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+ 
 </nav>
+
 <div id="form-messages"></div>
             <div id="startchange"></div>
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -199,11 +201,11 @@
           <a href="#"><i class="fa fa-youtube"></i></a>
 
         </div>
-
+        <a href="mailto:jmoore@romecode.com">Contact Webmaster</a>
       </div>
 
       <div class="footer-right">
-
+ <div class="alert alert-success alert-dismissible" role="alert" id="mailer"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Your Message Has Been Sent Successfully! Please allow 20 - 30 minutes for receipt. </div>
         <p class="holla">Contact Us</p>
 
         <form method="post" id="ajax-contact" name="emailform" action="email.php">
@@ -237,11 +239,15 @@
             url: $(form).attr('action'), 
             data: formData,
             success: function(msg){
-              alert("form post success!");
+              $('#mailer').show('slow');
+              $('#ajax-contact').each(function() {
+                this.reset();
+              });
+              //alert("form post success!");
                 //$("#stayInformed").modal('hide');
             },
             error: function(){
-                alert("form post failed");
+                alert("form submission failed!");
             }   
         });
     });

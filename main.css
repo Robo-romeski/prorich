@@ -159,3 +159,14 @@ color: #5383d3;
   vertical-align: middle;
   width: 140px;
 }
+#mailer{
+display: none;
+}
+.alert{
+      position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 5rem;
+    z-index: 1000;
+}
